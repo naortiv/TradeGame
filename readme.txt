@@ -1,20 +1,32 @@
-# Guessing Game
-A simple guessing game implemented in Python.
-The program generates a random number, and the player needs to guess the number within a specified range.
-The program provides hints to help the player narrow down their guess.
+# Stock Price Guessing Game
+
+A fun and interactive game where the player chooses a stock market stock by its ticker symbol and guesses if the stock price will go up or down.
+The game fetches the current price of the stock using the Alpha Vantage API and compares the player's guess with the actual direction of the stock price.
 
 ## How to Play
-1. Clone the repository or download the `guessing_game.py` file.
-2. Make sure you have Python installed on your machine. The game requires Python 3 or above.
-3. Open a terminal or command prompt and navigate to the directory where the `guessing_game.py` file is located.
-4. Run the game by executing the following command:
+1. Clone the repository or download the `stock_guessing_game.py` file.
+2. Make sure you have Python 3 installed on your machine.
+3. Install the `requests` library if it's not already installed. You can install it by running the following command:
     ```
-    python guessing_game.py
+    pip install requests
     ```
-5. The game will display a welcome message and instructions on how to play. It will prompt you to enter your guess.
-6. Enter a number and press Enter. The program will provide feedback on whether your guess is too high or too low.
-7. Keep guessing until you either guess the correct number or exhaust the maximum number of attempts.
-8. After the game ends, you can choose to play again by running the game again.
+4. Obtain an API key from Alpha Vantage. You can sign up for a free API key at [Alpha Vantage API](https://www.alphavantage.co/).
+5. Open the `stock_guessing_game.py` file in a text editor and replace `'YOUR_API_KEY'` with your actual Alpha Vantage API key in the `ALPHA_VANTAGE_API_KEY` variable.
+6. Open a terminal or command prompt and navigate to the directory where the `stock_guessing_game.py` file is located.
+7. Run the game by executing the following command:
+    ```
+    python stock_guessing_game.py
+    ```
+8. The game will display a welcome message and instructions on how to play. It will prompt you to enter the stock ticker symbol (e.g., AAPL, GOOGL, TSLA).
+9. The game will fetch the current price of the stock using the Alpha Vantage API and present it to you. You need to guess if the stock price will go up or down.
+10. The game will reveal the actual direction of the stock price, and if your guess matches, you win!
+11. Enjoy playing the Stock Price Guessing Game and see if you can make accurate predictions!
 
 ## Dependencies
-requires Python 3 or above to be installed on your machine.
+The game requires the following dependency:
+- `requests`: A Python library for making HTTP requests. It can be installed using the following command:
+    ```
+    pip install requests
+    or
+    python -m pip install requests (from cmd)
+    ```
